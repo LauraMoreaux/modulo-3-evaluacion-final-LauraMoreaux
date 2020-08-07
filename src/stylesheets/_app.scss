@@ -1,0 +1,108 @@
+body {
+  background: #212a2b url(../images/rick-and-morty-falling-out.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.App {
+  & .header {
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    box-shadow: seashell 3px;
+
+    & .wrapper {
+      padding: 25px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: myFont;
+      font-size: 30px;
+
+      & .logo-box {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+
+        & img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          opacity: 1;
+        }
+      }
+      & h1 {
+        margin-left: 10px;
+        color: white;
+      }
+    }
+
+    & .form {
+      color: white;
+
+      &__input-text {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 20px;
+        color: black;
+        padding-left: 30px;
+      }
+      &__input-text::placeholder {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: grey;
+      }
+
+      & img {
+        opacity: 1;
+      }
+
+      & i {
+        color: white;
+      }
+    }
+  }
+  & .ch-list {
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    grid-auto-flow: row;
+    justify-items: center;
+
+    & .ch-card {
+      background-color: white;
+      height: 300px;
+      width: 190px;
+      text-align: center;
+      border: 1px solid red;
+      font-family: $fontPrimary;
+    }
+  }
+
+  & .modal {
+    border: 1px solid red;
+    width: 30%;
+    margin-left: 35%;
+    padding: 15px;
+    background-color: pink;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &__details {
+      padding: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}

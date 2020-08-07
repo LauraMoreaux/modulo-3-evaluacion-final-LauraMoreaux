@@ -1,14 +1,29 @@
 import React from 'react';
-import '../stylesheets/App.css';
+import '../stylesheets/_index.scss';
 import CharacterCard from './CharacterCard';
 
-const CharacterDetail = () => {
+const CharacterList = () => {
   return (
     <>
-      <div> Soy la lista de personajes</div>
-      <CharacterCard />
+      <section className='ch-list'>
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+        <CharacterCard />
+      </section>
     </>
   );
 };
 
-export default CharacterDetail;
+export default CharacterList;
