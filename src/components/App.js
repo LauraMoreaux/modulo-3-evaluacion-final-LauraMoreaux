@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../stylesheets/_index.scss';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Img1 from '../images/rick1.jpg';
+import getDatafromApi from '../services/getDatafromApi';
 
-function App() {
+const App = () => {
+  const [listCharacters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    getDatafromApi().then((characters) => {
+      setCharacters(characters);
+    });
+  }, []);
+
+  console.log(listCharacters);
+
   return (
     <div className='App'>
       <header className='header'>
@@ -18,11 +29,11 @@ function App() {
         <Filters />
       </header>
       <main className='main'>
-        <CharacterList />
+        <CharacterList characters={listCharacters} />
       </main>
       <CharacterDetail />
     </div>
   );
-}
+};
 
 export default App;
