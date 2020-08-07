@@ -10,8 +10,7 @@ body {
   & .header {
     height: 350px;
     width: 100%;
-    background-color: black;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 10px 10px #39ff14;
 
     & .wrapper {
@@ -26,12 +25,12 @@ body {
         display: inline-block;
         height: 80%;
         width: 10%;
+        padding: 20px;
 
         & img {
           height: 100%;
           width: 100%;
           border-radius: 50%;
-          opacity: 1;
         }
       }
       & h1 {
@@ -56,10 +55,10 @@ body {
         color: grey;
       }
 
-      & img {
+      & .img-box {
+        background-color: transparent;
         &:hover {
           transform: scale(1.5);
-          opacity: 1;
         }
       }
 
@@ -69,17 +68,16 @@ body {
     }
   }
   & .ch-list {
-    margin-top: 25px;
-    margin-left: 300px;
-    margin-right: 300px;
-    padding: 25px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-    grid-auto-flow: row;
-    justify-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 50px;
+    justify-content: center;
 
     & .ch-card {
+      margin: 25px;
       background-color: white;
       height: 400px;
       width: 290px;

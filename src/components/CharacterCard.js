@@ -2,7 +2,6 @@ import React from 'react';
 import '../stylesheets/_index.scss';
 
 const CharacterCard = (props) => {
-  console.log(props);
   return (
     <article className='ch-card'>
       <img className='cd-img' src={props.image} alt='Foto del personaje'></img>

@@ -8,6 +8,7 @@ import getDatafromApi from '../services/getDatafromApi';
 
 const App = () => {
   const [listCharacters, setCharacters] = useState([]);
+  const [filteredCharacter, setFiltered] = useState('');
 
   useEffect(() => {
     getDatafromApi().then((characters) => {
@@ -15,7 +16,18 @@ const App = () => {
     });
   }, []);
 
-  console.log(listCharacters);
+  const handleFilter = (data) => {
+    console.log(data);
+    setFiltered(data);
+  };
+
+  const renderFiltered = () => {
+    return listCharacters.filter((character) => {
+      return character.name
+        .toLowerCase()
+        .includes(filteredCharacter.toLowerCase());
+    });
+  };
 
   return (
     <div className='App'>
@@ -26,10 +38,13 @@ const App = () => {
           </div>
           <h1>Rick and Morty App</h1>
         </div>
-        <Filters />
+        <Filters
+          handleFilter={handleFilter}
+          filteredCharacter={filteredCharacter}
+        />
       </header>
       <main className='main'>
-        <CharacterList characters={listCharacters} />
+        <CharacterList characters={renderFiltered()} />
       </main>
       <CharacterDetail />
     </div>
