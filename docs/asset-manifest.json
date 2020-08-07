@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.bdb7edad.chunk.css",
+    "main.js": "./static/js/main.f70945e4.chunk.js",
+    "main.js.map": "./static/js/main.f70945e4.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8e50b552.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8e50b552.js.map",
+    "static/js/2.407158e8.chunk.js": "./static/js/2.407158e8.chunk.js",
+    "static/js/2.407158e8.chunk.js.map": "./static/js/2.407158e8.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.9f1ea7524583063ff3f7e78c731de18b.js": "./precache-manifest.9f1ea7524583063ff3f7e78c731de18b.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.bdb7edad.chunk.css.map": "./static/css/main.bdb7edad.chunk.css.map",
+    "static/js/2.407158e8.chunk.js.LICENSE.txt": "./static/js/2.407158e8.chunk.js.LICENSE.txt",
+    "static/media/_index.scss": "./static/media/rick-and-morty-falling-out.5f38ccc5.jpg",
+    "static/media/rick1.jpg": "./static/media/rick1.d9864418.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e50b552.js",
+    "static/js/2.407158e8.chunk.js",
+    "static/css/main.bdb7edad.chunk.css",
+    "static/js/main.f70945e4.chunk.js"
+  ]
+}
