@@ -6,6 +6,7 @@ import CharacterDetail from './CharacterDetail';
 import Img1 from '../images/rick1.jpg';
 import getDatafromApi from '../services/getDatafromApi';
 import { Switch, Route } from 'react-router-dom';
+import Error from './Error';
 
 const App = () => {
   const [listCharacters, setCharacters] = useState([]);
@@ -22,11 +23,14 @@ const App = () => {
   };
 
   const renderFiltered = () => {
-    return listCharacters.filter((character) => {
-      return character.name
-        .toLowerCase()
-        .includes(filteredCharacter.toLowerCase());
-    });
+    return listCharacters
+      .filter((character) => {
+        return character.name
+          .toLowerCase()
+          .includes(filteredCharacter.toLowerCase());
+      })
+      .sort((a, b) => String(b.id).localeCompare(String(a.id))); //STRING
+    // c.sort((a,b) => {if(a.name<b.name} {return -1;} else if(a.name === b.name) {return 0;} else { return 1;} } )
   };
 
   const renderDetail = (props) => {
@@ -47,6 +51,8 @@ const App = () => {
           episode={detailedCharacter.episode.length}
         />
       );
+    } else {
+      return <Error />;
     }
   };
 
@@ -65,10 +71,13 @@ const App = () => {
         />
       </header>
       <main className='main'>
-        <Route exact path='/'>
-          <CharacterList characters={renderFiltered()} />
-        </Route>
         <Switch>
+          <Route path='/'>
+            <CharacterList
+              characters={renderFiltered()}
+              filteredCharacter={filteredCharacter}
+            />
+          </Route>
           <Route exact path='/character/:id' render={renderDetail} />
         </Switch>
       </main>

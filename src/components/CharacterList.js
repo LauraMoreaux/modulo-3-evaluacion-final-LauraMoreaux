@@ -3,6 +3,7 @@ import '../stylesheets/_index.scss';
 import CharacterCard from './CharacterCard';
 
 const CharacterList = (props) => {
+  const searchText = props.filteredCharacter;
   const htmlCode = props.characters.map((character, index) => {
     return (
       <CharacterCard
@@ -17,7 +18,13 @@ const CharacterList = (props) => {
 
   return (
     <>
-      <section className='ch-list'>{htmlCode}</section>
+      <section className='ch-list'>
+        <span className='ch-list error-box'>
+          {props.characters.length === 0
+            ? `El personaje ${searchText} no se encuentra`
+            : htmlCode}
+        </span>
+      </section>
     </>
   );
 };

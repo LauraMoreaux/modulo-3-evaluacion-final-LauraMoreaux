@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../stylesheets/_index.scss';
 import Img2 from '../images/rick_icon.png';
 
@@ -33,6 +34,11 @@ const Filters = (props) => {
       </div>
     </form>
   );
+};
+
+Filters.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
+  filteredCharacter: PropTypes.string.isRequired,
 };
 
 export default Filters;
