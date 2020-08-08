@@ -64,14 +64,14 @@ const App = () => {
           filteredCharacter={filteredCharacter}
         />
       </header>
-      <Route exact path='/'>
-        <main className='main'>
+      <main className='main'>
+        <Route exact path='/'>
           <CharacterList characters={renderFiltered()} />
-        </main>
-      </Route>
-      <Switch>
-        <Route exact path='/character/:id' render={renderDetail} />
-      </Switch>
+        </Route>
+        <Switch>
+          <Route exact path='/character/:id' render={renderDetail} />
+        </Switch>
+      </main>
     </div>
   );
 };

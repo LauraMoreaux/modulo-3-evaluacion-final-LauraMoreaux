@@ -24,10 +24,17 @@ const CharacterDetail = (props) => {
                 alt='Foto del personaje'
               />
               <ul className='ch-list'>
-                <li className='ch-details'>Estado: {props.status}</li>
+                <li className='ch-details'>
+                  Estado:
+                  {props.status === 'Alive' ? (
+                    <i className='fas fa-heartbeat'></i>
+                  ) : (
+                    <i className='fas fa-skull-crossbones'></i>
+                  )}
+                </li>
                 <li className='ch-details'> Especie: {props.specie}</li>
                 <li className='ch-details'>Origen: {props.origin}</li>
-                <li className='ch-details'> Nº episodios:{props.episode}</li>
+                <li className='ch-details'> Nº episodios: {props.episode}</li>
               </ul>
             </section>
           </div>

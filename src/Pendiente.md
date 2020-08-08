@@ -1,8 +1,4 @@
 1 // error en consola
-
-y si está vivo o muerto.
-2 // Al entrar en el detalle de un personaje y a continuación pulsar atrás, el campo de texto debe mostrar el
-texto que tenía anteriormente
 3 // Si se busca por un texto por ejemplo "XXX" y no hay ningún personaje que coincida con dicho texto se
 debe mostrar un mensaje del tipo "No hay ningún personaje que coincida con la palabra XXX".
 4 // Usa propTypes para evitar errores de tipado.
