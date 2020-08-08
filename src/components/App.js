@@ -5,6 +5,7 @@ import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Img1 from '../images/rick1.jpg';
 import getDatafromApi from '../services/getDatafromApi';
+import { Switch, Route } from 'react-router-dom';
 
 const App = () => {
   const [listCharacters, setCharacters] = useState([]);
@@ -17,7 +18,6 @@ const App = () => {
   }, []);
 
   const handleFilter = (data) => {
-    console.log(data);
     setFiltered(data);
   };
 
@@ -27,6 +27,29 @@ const App = () => {
         .toLowerCase()
         .includes(filteredCharacter.toLowerCase());
     });
+  };
+
+  const renderDetail = (props) => {
+    console.log(props);
+    const routeId = props.match.params.id;
+    const detailedCharacter = listCharacters.find(
+      (character) => character.id === routeId
+    );
+    if (detailedCharacter) {
+      return (
+        <CharacterDetail
+          name={detailedCharacter.name}
+          id={detailedCharacter.id}
+          image={detailedCharacter.image}
+          specie={detailedCharacter.species}
+          status={detailedCharacter.status}
+          origin={detailedCharacter.origin.name}
+          episode={detailedCharacter.episode.length}
+        />
+      );
+    } else {
+      return <p className='notFound'>Personaje no encontrado</p>;
+    }
   };
 
   return (
@@ -43,10 +66,14 @@ const App = () => {
           filteredCharacter={filteredCharacter}
         />
       </header>
-      <main className='main'>
-        <CharacterList characters={renderFiltered()} />
-      </main>
-      <CharacterDetail />
+      <Route exact path='/'>
+        <main className='main'>
+          <CharacterList characters={renderFiltered()} />
+        </main>
+      </Route>
+      <Switch>
+        <Route exact path='/character/:id' render={renderDetail} />
+      </Switch>
     </div>
   );
 };

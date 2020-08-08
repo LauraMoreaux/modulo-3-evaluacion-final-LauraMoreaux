@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../stylesheets/_index.scss';
 
 const CharacterCard = (props) => {
@@ -7,8 +8,9 @@ const CharacterCard = (props) => {
       <img className='cd-img' src={props.image} alt='Foto del personaje'></img>
       <h3 className='ch-name'>{props.name}</h3>
       <p className='ch-type'>{props.specie}</p>
-      {/* <Link to={`/product/${props.id}`} className="card__btn">
-      </Link> */}
+      <Link to={`/character/${props.id}`}>
+        <button className='card__btn'>+ Info</button>
+      </Link>
     </article>
   );
 };

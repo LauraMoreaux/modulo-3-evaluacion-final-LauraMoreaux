@@ -99,22 +99,46 @@ body {
   }
 
   & .modal {
-    border: 1px solid red;
-    width: 30%;
-    margin-left: 35%;
-    padding: 15px;
-    background-color: pink;
+    background-color: rgba(232, 232, 232, 0.9);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &__dialog {
+      height: 450px;
+      width: 600px;
+      box-shadow: 0px 0px 10px 10px #e256e9;
+    }
     &__header {
+      background-color: black;
+      color: white;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      padding: 20px;
+      font-family: $fontPrimary;
+      font-size: 30px;
     }
     &__details {
       padding: 30px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      background-image: linear-gradient(#f7d606, #23f519, #e256e9);
+    }
+
+    & .card__img {
+      border-radius: 50%;
+    }
+    & .ch-details {
+      font-family: $fontPrimary;
+      font-size: 20px;
     }
   }
 }
