@@ -7,8 +7,12 @@ const Filters = (props) => {
     props.handleFilter(ev.target.value);
   };
 
+  const submitHandler = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
-    <form className='form'>
+    <form className='form' onSubmit={submitHandler}>
       <div className='wrapper'>
         <label htmlFor='filterName' className='form__label '>
           Introduce tu personaje

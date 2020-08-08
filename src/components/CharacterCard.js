@@ -8,8 +8,8 @@ const CharacterCard = (props) => {
       <img className='cd-img' src={props.image} alt='Foto del personaje'></img>
       <h3 className='ch-name'>{props.name}</h3>
       <p className='ch-type'>{props.specie}</p>
-      <Link to={`/character/${props.id}`}>
-        <button className='card__btn'>+ Info</button>
+      <Link to={`/character/${props.id}`} className='card__btn'>
+        + Info
       </Link>
     </article>
   );

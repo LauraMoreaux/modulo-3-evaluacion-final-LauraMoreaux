@@ -136,9 +136,31 @@ body {
     & .card__img {
       border-radius: 50%;
     }
-    & .ch-details {
-      font-family: $fontPrimary;
-      font-size: 20px;
+
+    & .ch-list {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      & .ch-details {
+        font-family: $fontPrimary;
+        font-size: 20px;
+        margin-top: 10px;
+      }
     }
   }
+}
+.notFound {
+  background-attachment: white;
+  border: red 1px solid;
+}
+
+.card__btn {
+  margin-top: 10px;
+  padding: 5px;
+  display: inline-block;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px lime;
 }

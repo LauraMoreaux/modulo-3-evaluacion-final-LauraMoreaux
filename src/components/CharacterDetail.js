@@ -23,7 +23,7 @@ const CharacterDetail = (props) => {
                 src={props.image}
                 alt='Foto del personaje'
               />
-              <ul>
+              <ul className='ch-list'>
                 <li className='ch-details'>Estado: {props.status}</li>
                 <li className='ch-details'> Especie: {props.specie}</li>
                 <li className='ch-details'>Origen: {props.origin}</li>
