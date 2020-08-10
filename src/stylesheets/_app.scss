@@ -72,9 +72,8 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  align-items: center;
-
   @include tablet {
+    grid-gap: 80px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -83,7 +82,11 @@ body {
     margin-top: 50px;
     justify-content: center;
   }
-
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 90px;
+  }
   & .ch-card {
     margin: 25px;
     background-color: $colorLight;
