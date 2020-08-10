@@ -26,11 +26,8 @@ const Filters = (props) => {
           placeholder='Rick'
           onChange={handleFilterChild}
         />
-
-        <button type='submit' className='img-box'>
-          <img src={Img2} alt='icono de Rick' />
-          {/* <i className='fal fa-search'></i> */}
-        </button>
+        <img src={Img2} alt='icono de Rick' className='img-box' />
+        {/* <i className='fal fa-search'></i> */}
       </div>
     </form>
   );

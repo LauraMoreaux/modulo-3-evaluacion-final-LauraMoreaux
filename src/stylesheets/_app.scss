@@ -10,11 +10,12 @@ body {
 .App {
   & .wrapper {
     padding: 15px;
-    //       display: flex;
-    //       align-items: center;
-    //       justify-content: center;
-    //       font-family: myFont;
-    //       font-size: 30px;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+    font-family: myFont;
+    font-size: 30px;
   }
 
   & .header {
@@ -54,6 +55,7 @@ body {
         border-radius: 20px;
         color: black;
         padding-left: 30px;
+        margin: 10px;
 
         &__input-text::placeholder {
           margin-left: 10px;
@@ -64,13 +66,9 @@ body {
     }
 
     & .img-box {
-      background-color: transparent;
-      height: 0px;
+      margin-bottom: -10px;
       &:hover {
         transform: scale(1.2);
-      }
-      & i {
-        color: white;
       }
     }
   }
