@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/_index.scss';
+import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 
 const CharacterList = (props) => {
@@ -27,6 +28,11 @@ const CharacterList = (props) => {
       </section>
     </>
   );
+};
+
+CharacterList.propTypes = {
+  characters: PropTypes.array,
+  filteredCharacter: PropTypes.string,
 };
 
 export default CharacterList;

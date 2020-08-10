@@ -72,7 +72,7 @@ const App = () => {
       </header>
       <main className='main'>
         <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
             <CharacterList
               characters={renderFiltered()}
               filteredCharacter={filteredCharacter}
