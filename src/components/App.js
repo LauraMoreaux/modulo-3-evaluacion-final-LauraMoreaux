@@ -29,8 +29,7 @@ const App = () => {
           .toLowerCase()
           .includes(filteredCharacter.toLowerCase());
       })
-      .sort((a, b) => String(b.id).localeCompare(String(a.id))); //STRING
-    // c.sort((a,b) => {if(a.name<b.name} {return -1;} else if(a.name === b.name) {return 0;} else { return 1;} } )
+      .sort((a, b) => b.name.localeCompare(a.name));
   };
 
   const renderDetail = (props) => {

@@ -27,7 +27,6 @@ const Filters = (props) => {
           onChange={handleFilterChild}
         />
         <img src={Img2} alt='icono de Rick' className='img-box' />
-        {/* <i className='fal fa-search'></i> */}
       </div>
     </form>
   );
