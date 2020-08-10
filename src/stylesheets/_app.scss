@@ -4,39 +4,45 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  min-height: 100vh;
 }
 
 .App {
+  & .wrapper {
+    padding: 15px;
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+    //       font-family: myFont;
+    //       font-size: 30px;
+  }
+
   & .header {
-    height: 350px;
+    // height: 200px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 10px #39ff14;
+    box-shadow: 5px 5px 5px 10px #39ff14;
+    font-family: myFont;
+    font-size: 20px;
 
-    & .wrapper {
-      padding: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: myFont;
-      font-size: 30px;
+    & .logo-box {
+      display: inline-block;
+      padding: 20px;
 
-      & .logo-box {
-        display: inline-block;
-        height: 80%;
-        width: 10%;
-        padding: 20px;
-
-        & img {
-          height: 100%;
-          width: 100%;
-          border-radius: 50%;
-        }
+      // height: 50px;
+      @include tablet {
+        width: 50%;
       }
-      & h1 {
-        margin-left: 10px;
-        color: white;
+      & img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
       }
+    }
+
+    & h1 {
+      margin-left: 10px;
+      color: white;
     }
 
     & .form {
@@ -48,26 +54,35 @@ body {
         border-radius: 20px;
         color: black;
         padding-left: 30px;
-      }
-      &__input-text::placeholder {
-        margin-left: 10px;
-        margin-right: 10px;
-        color: grey;
-      }
 
-      & .img-box {
-        background-color: transparent;
-        &:hover {
-          transform: scale(1.5);
+        &__input-text::placeholder {
+          margin-left: 10px;
+          margin-right: 10px;
+          color: grey;
         }
       }
+    }
 
+    & .img-box {
+      background-color: transparent;
+      height: 0px;
+      &:hover {
+        transform: scale(1.2);
+      }
       & i {
         color: white;
       }
     }
   }
-  & .ch-list {
+}
+
+.ch-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+
+  @include tablet {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -75,86 +90,125 @@ body {
     max-width: 1200px;
     margin-top: 50px;
     justify-content: center;
-
-    & .ch-card {
-      margin: 25px;
-      background-color: white;
-      height: 400px;
-      width: 290px;
-      text-align: center;
-      font-family: $fontPrimary;
-      box-shadow: 0px 0px 10px 10px #39ff14;
-
-      &:hover {
-        background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
-        transform: scale(1.07);
-        font-size: 18px;
-      }
-
-      & img {
-        height: 75%;
-        width: 100%;
-      }
-    }
   }
 
-  & .modal {
-    background-color: rgba(232, 232, 232, 0.9);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 1300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  & .ch-card {
+    margin: 25px;
+    background-color: white;
+    height: 400px;
+    width: 290px;
+    text-align: center;
+    font-family: $fontPrimary;
+    box-shadow: 0px 0px 10px 10px #39ff14;
 
-    &__dialog {
-      height: 450px;
-      width: 600px;
-      box-shadow: 0px 0px 10px 10px #e256e9;
+    &:hover {
+      background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+      transform: scale(1.07);
+      font-size: 18px;
     }
-    &__header {
-      background-color: black;
-      color: white;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 20px;
-      font-family: $fontPrimary;
+    & img {
+      height: 75%;
+      width: 100%;
+    }
+  }
+}
+
+.modal {
+  background-color: rgba(232, 232, 232, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 950px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &__dialog {
+    width: 340px;
+    box-shadow: 0px 0px 10px 10px #e256e9;
+  }
+  &__header {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: $fontPrimary;
+    font-size: 15px;
+    @include desktop {
       font-size: 30px;
     }
-    &__details {
-      padding: 30px;
-      display: flex;
+  }
+  &__details {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(#f7d606, #23f519, #e256e9);
+    @include desktop {
       flex-direction: row;
       justify-content: space-around;
-      background-image: linear-gradient(#f7d606, #23f519, #e256e9);
     }
+  }
 
-    & .card__img {
-      border-radius: 50%;
-    }
+  & .card__img {
+    border-radius: 50%;
+  }
 
-    & .ch-list {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
+  & .ch-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-      & .ch-details {
-        font-family: $fontPrimary;
+    & .ch-details {
+      font-family: $fontPrimary;
+      font-size: 15px;
+      margin-top: 10px;
+      @include tablet {
         font-size: 20px;
-        margin-top: 10px;
       }
     }
   }
 }
-.notFound {
-  background-attachment: white;
-  border: red 1px solid;
-}
 
+.error {
+  background-color: rgba(232, 232, 232, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 950px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-family: $fontPrimary;
+    font-size: 20px;
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+  &__details {
+    font-size: $fontPrimary;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(#f7d606, #23f519, #e256e9);
+    font-size: 12px;
+    @include desktop {
+      font-size: 17px;
+    }
+  }
+}
 .card__btn {
   margin-top: 10px;
   padding: 5px;
@@ -164,10 +218,9 @@ body {
   background-color: white;
   box-shadow: 0px 0px 5px 5px lime;
 }
-
-// .error-box {
-//   font-family: $fontPrimary;
-//   font-size: 30px;
-//   display: inline-block;
-//   background-color: white;
-// }
+.error-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 5px 5px 5px 10px #39ff14;
+  font-family: myFont;
+  font-size: 30px;
+}

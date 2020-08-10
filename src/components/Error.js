@@ -7,16 +7,16 @@ const Error = (props) => {
     ev.preventDefault();
   };
   return (
-    <div className='modal'>
+    <div className='error'>
       <div className='modal__dialog'>
         <div className='modal__content' onClick={handleModalContent}>
-          <header className='modal__header'>
+          <header className='error__header'>
             <h2 className='modal__title'>{props.name}</h2>
             <Link to='/'>
-              <span className='modal__close icon fas fa-times'></span>
+              <span>Ir a la web principal</span>
             </Link>
           </header>
-          <section className='modal__details'>
+          <section className='error__details'>
             <h2>El personaje que buscas no existe</h2>
           </section>
         </div>
