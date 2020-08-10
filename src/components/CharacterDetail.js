@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import '../stylesheets/_index.scss';
 
 const CharacterDetail = (props) => {
+  console.log(props);
   const handleModalContent = (ev) => {
     ev.preventDefault();
   };
@@ -33,7 +34,14 @@ const CharacterDetail = (props) => {
                     <i className='fas fa-skull-crossbones'></i>
                   )}
                 </li>
-                <li className='ch-details'> Especie: {props.specie}</li>
+                <li className='ch-details'>
+                  Especie:
+                  {props.specie === 'Alien' ? (
+                    <i class='fab fa-reddit-alien'></i>
+                  ) : (
+                    <i className='fas fa-user-circle'></i>
+                  )}
+                </li>
                 <li className='ch-details'>Origen: {props.origin}</li>
                 <li className='ch-details'> Nº episodios: {props.episode}</li>
               </ul>
