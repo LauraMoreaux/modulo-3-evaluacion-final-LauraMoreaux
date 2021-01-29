@@ -14,7 +14,7 @@ const Filters = (props) => {
 
   return (
     <form className='form' onSubmit={submitHandler}>
-      <div className='wrapper'>
+      <div className='wrapper__form'>
         <label htmlFor='filterName' className='form__label '>
           Introduce tu personaje
         </label>

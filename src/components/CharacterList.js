@@ -20,7 +20,7 @@ const CharacterList = (props) => {
   return (
     <>
       <section className='ch-list'>
-        <span className='ch-list'>
+        <span className='ch-list-li'>
           {props.characters.length === 0 ? (
             <span className='error-box'>
               El personaje {searchText} no se encuentra

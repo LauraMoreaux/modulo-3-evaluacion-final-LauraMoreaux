@@ -63,11 +63,11 @@ const App = () => {
             <img src={Img1} alt='Rick and Morty Logo' />
           </div>
           <h1>Rick and Morty App</h1>
+          <Filters
+            handleFilter={handleFilter}
+            filteredCharacter={filteredCharacter}
+          />
         </div>
-        <Filters
-          handleFilter={handleFilter}
-          filteredCharacter={filteredCharacter}
-        />
       </header>
       <main className='main'>
         <Switch>

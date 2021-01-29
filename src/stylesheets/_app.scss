@@ -8,61 +8,72 @@ body {
 }
 
 .App {
-  & .wrapper {
-    padding: 15px;
-    font-family: myFont;
-    font-size: 30px;
-  }
 
   & .header {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 5px 5px 5px 10px #39ff14;
+    min-height: 450px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 5px 5px 5px 2px #39ff14;
     font-family: myFont;
-    font-size: 20px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
-    & .logo-box {
-      display: inline-block;
-      padding: 20px;
+    & .wrapper {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-evenly;
 
-      @include tablet {
-        width: 50%;
+      & h1 {
+        color: $colorLight;
+        font-size: 30px;
       }
-      & img {
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-      }
-    }
+  
+      & .form {
+        color: $colorLight;
 
-    & h1 {
-      margin-left: 10px;
-      color: $colorLight;
-    }
-
-    & .form {
-      color: $colorLight;
-
-      &__input-text {
-        margin-left: 10px;
-        margin-right: 20px;
-        border-radius: 20px;
-        color: $colorDark;
-        padding-left: 30px;
-        margin: 10px;
-
-        &__input-text::placeholder {
-          margin-left: 10px;
-          margin-right: 10px;
-          color: grey;
+        &__label {
+          font-size: 13px;
+        }
+  
+        &__input-text {
+          margin-left: 5px;
+          margin-right: 5px;
+          border-radius: 20px;
+          color: $colorDark;
+          padding-left: 10px;
+          width: 50px;
+  
+          &__input-text::placeholder {
+            margin-left: 5px;
+            margin-right: 5px;
+            color: grey;
+          }
         }
       }
-    }
+    
+      & .img-box {
+        height: 20px;
+        width: 20px;
+        margin-bottom: -5px;
+        
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
 
-    & .img-box {
-      margin-bottom: -10px;
-      &:hover {
-        transform: scale(1.2);
+      & .logo-box {
+        display: inline-block;
+        
+        & img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -72,38 +83,47 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  @include tablet {
-    grid-gap: 80px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin-top: 50px;
-    justify-content: center;
-  }
-  @include desktop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 90px;
-  }
-  & .ch-card {
-    margin: 25px;
-    background-color: $colorLight;
-    height: 400px;
-    width: 290px;
-    text-align: center;
-    font-family: $fontPrimary;
-    box-shadow: 0px 0px 10px 10px #39ff14;
+  justify-content: center;
+  text-align: center;
 
-    &:hover {
-      background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
-      transform: scale(1.07);
-      font-size: 18px;
-    }
-    & img {
-      height: 75%;
-      width: 100%;
+  // @include tablet {
+  //   grid-gap: 80px;
+  //   margin: auto;
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   max-width: 1200px;
+  //   margin-top: 50px;
+  //   justify-content: center;
+  // }
+  // @include desktop {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-gap: 90px;
+  // }
+
+  & .ch-list-li {
+    text-align: center;
+    margin: auto;
+    
+    & .ch-card {
+      margin: 45px;
+      background-color: $colorLight;
+      height: 330px;
+      width: 190px;
+      text-align: center;
+      font-family: $fontPrimary;
+      box-shadow: 0px 0px 5px 5px black;
+
+      &:hover {
+        background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+        transform: scale(1.07);
+        font-size: 18px;
+      }
+      & img {
+        height: 65%;
+        width: 100%;
+      }
     }
   }
 }
