@@ -31,6 +31,11 @@ body {
       & h1 {
         color: $colorLight;
         font-size: 30px;
+
+          @include tablet {
+            font-size: 40px;
+          }
+
       }
   
       & .form {
@@ -38,6 +43,10 @@ body {
 
         &__label {
           font-size: 13px;
+
+          @include tablet {
+            font-size: 25px;
+          }
         }
   
         &__input-text {
@@ -47,7 +56,10 @@ body {
           color: $colorDark;
           padding-left: 10px;
           width: 50px;
-  
+            @include tablet {
+              width: 100px;
+              font-size: 20px;
+            }
           &__input-text::placeholder {
             margin-left: 5px;
             margin-right: 5px;
@@ -60,6 +72,12 @@ body {
         height: 20px;
         width: 20px;
         margin-bottom: -5px;
+
+        @include tablet {
+          width: 30px;
+          height: 30px;
+          margin-bottom: -10px;
+        }
         
         &:hover {
           transform: scale(1.2);
@@ -72,7 +90,14 @@ body {
         & img {
           height: 100%;
           width: 100%;
+          max-height: 200px;
+          max-width: 200px;
           border-radius: 50%;
+
+          @include tablet {
+            max-height: 400px;
+            max-width: 400px;
+        }
         }
       }
     }
@@ -86,25 +111,15 @@ body {
   justify-content: center;
   text-align: center;
 
-  // @include tablet {
-  //   grid-gap: 80px;
-  //   margin: auto;
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   max-width: 1200px;
-  //   margin-top: 50px;
-  //   justify-content: center;
-  // }
-  // @include desktop {
-  //   display: grid;
-  //   grid-template-columns: repeat(3, 1fr);
-  //   grid-gap: 90px;
-  // }
-
   & .ch-list-li {
     text-align: center;
     margin: auto;
+
+  //   @include tablet {
+  //     display: grid;
+  //     grid-template-columns: repeat(3, 1fr);
+  //     grid-gap: 20px;
+  // }
     
     & .ch-card {
       margin: 45px;
@@ -113,7 +128,8 @@ body {
       width: 190px;
       text-align: center;
       font-family: $fontPrimary;
-      box-shadow: 0px 0px 5px 5px black;
+      // border: 2px solid white;
+      box-shadow: 0px 0px 5px 2px #39ff14;
 
       &:hover {
         background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
@@ -173,9 +189,9 @@ body {
   }
 
   & .ch-list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // text-align: center;
 
     & .ch-details {
       font-family: $fontPrimary;
@@ -185,20 +201,24 @@ body {
         font-size: 20px;
       }
     }
+
+    & .ch-list-li {
+      margin-top: 50px;
+    }
   }
 }
 
 .error {
-  background-color: rgba(232, 232, 232, 0.9);
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 950px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // background-color: rgba(232, 232, 232, 0.9);
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // min-height: 950px;
+  // width: 100%;
+  // height: 100%;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
   &__header {
     background-color: $colorDark;
@@ -213,9 +233,9 @@ body {
   &__details {
     font-size: $fontPrimary;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
     background-image: linear-gradient(#f7d606, #23f519, #e256e9);
     font-size: 12px;
     @include desktop {
@@ -238,3 +258,16 @@ body {
   font-family: myFont;
   font-size: 30px;
 }
+
+// .footer {
+//   position: relative;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100px;
+//   padding: 25px;
+//   background-color: black;
+//   font-family: myFont;
+//   color:#39ff14;
+//   box-shadow: 5px 5px 5px 10px #39ff14;
+//   font-size: 25px;
+// }
