@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.9c998fbd.chunk.css",
+    "main.css": "./static/css/main.86205f7e.chunk.css",
     "main.js": "./static/js/main.641995b7.chunk.js",
     "main.js.map": "./static/js/main.641995b7.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.8e50b552.js",
@@ -8,9 +8,9 @@
     "static/js/2.ee91ca9a.chunk.js": "./static/js/2.ee91ca9a.chunk.js",
     "static/js/2.ee91ca9a.chunk.js.map": "./static/js/2.ee91ca9a.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.f50bdaccb5eef8fec19537d2848fe896.js": "./precache-manifest.f50bdaccb5eef8fec19537d2848fe896.js",
+    "precache-manifest.be31478a0b6b9d406deb636b7e9a2e6b.js": "./precache-manifest.be31478a0b6b9d406deb636b7e9a2e6b.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.9c998fbd.chunk.css.map": "./static/css/main.9c998fbd.chunk.css.map",
+    "static/css/main.86205f7e.chunk.css.map": "./static/css/main.86205f7e.chunk.css.map",
     "static/js/2.ee91ca9a.chunk.js.LICENSE.txt": "./static/js/2.ee91ca9a.chunk.js.LICENSE.txt",
     "static/media/_index.scss": "./static/media/rick-and-morty-falling-out.5f38ccc5.jpg",
     "static/media/rick1.jpg": "./static/media/rick1.d9864418.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.8e50b552.js",
     "static/js/2.ee91ca9a.chunk.js",
-    "static/css/main.9c998fbd.chunk.css",
+    "static/css/main.86205f7e.chunk.css",
     "static/js/main.641995b7.chunk.js"
   ]
 }
